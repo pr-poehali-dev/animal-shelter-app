@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { LocationReport } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -37,7 +36,6 @@ const ReportForm = ({ onSuccess }: ReportFormProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      species: undefined,
       description: "",
       contactName: "",
       contactPhone: "",
@@ -99,7 +97,10 @@ const ReportForm = ({ onSuccess }: ReportFormProps) => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Вид животного</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select 
+                    onValueChange={field.onChange} 
+                    value={field.value}
+                  >
                     <FormControl>
                       <SelectTrigger>
                         <SelectValue placeholder="Выберите вид животного" />
