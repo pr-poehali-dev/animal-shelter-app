@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, MapPin, Paw } from "lucide-react";
+import { Heart, MapPin, Cat } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -17,7 +17,7 @@ export default function HomePage() {
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
             <Link to="/catalog">
-              <Paw className="mr-2 h-5 w-5" />
+              <Cat className="mr-2 h-5 w-5" />
               Смотреть животных
             </Link>
           </Button>
@@ -40,7 +40,7 @@ export default function HomePage() {
             <Card>
               <CardContent className="pt-6">
                 <div className="mb-4 rounded-full bg-primary/10 p-3 w-fit">
-                  <Paw className="h-8 w-8 text-primary" />
+                  <Cat className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Каталог животных</h3>
                 <p className="text-muted-foreground mb-4">

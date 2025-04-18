@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, MapPin, Paw, Phone } from "lucide-react";
+import { Heart, Mail, MapPin, Cat, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Paw className="h-6 w-6" />
+              <Cat className="h-6 w-6" />
               <span className="font-bold text-lg">Домашний приют</span>
             </div>
             <p className="text-sm">
@@ -39,7 +39,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/catalog" className="flex items-center gap-2 hover:underline">
-                  <Paw className="h-4 w-4" />
+                  <Cat className="h-4 w-4" />
                   Каталог животных
                 </Link>
               </li>
